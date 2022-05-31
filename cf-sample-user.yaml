@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  myuser:
+    Type: AWS::IAM::User
+    Properties:
+    #  Groups:
+    #    Dev:
+      # LoginProfile:
+        # Titi@1011
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+        - arn:aws:iam::aws:policy/job-function/Billing
+    #   Path:
+  #     PermissionsBoundary: arn:aws:iam::aws:policy/AdministratorAccess
+      # Policies:
+      #  - AdministratorAccess
+      #  - Billing
+      Tags:
+        - Key: Name
+          Value: baby-doll
+      UserName: baby-doll
